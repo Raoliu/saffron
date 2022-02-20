@@ -1,0 +1,121 @@
+.cardBody {
+    background-color: #EEEAE6;
+    border-top-right-radius: 40rpx;
+    padding-bottom: 80rpx;
+}
+
+.dialog {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    top: 40rpx;
+    background-color: #F2D8DC;
+    border-radius: 40rpx;
+    padding-bottom: 40rpx;
+}
+
+.closeImg {
+    width: 100%;
+    text-align: center;
+    padding: 40rpx 0;
+}
+
+.closeImg image {
+    width: 64rpx;
+}
+
+.dialogTitle {
+    color: #8A2432;
+    font-size: 64rpx;
+    font-weight: bold;
+    text-align: center;
+}
+
+.dialogImg {
+    width: 480rpx;
+    margin: 0rpx auto;
+    margin-top: 20rpx;
+}
+
+.dialogImg image {
+    width: 100%;
+}
+
+.dialogCont {
+    padding: 30rpx 0;
+    text-align: center;
+}
+
+.dialogContitle {
+    font-size: 30rpx;
+    color: #8A2432;
+    font-weight: bold;
+}
+
+.footBtn {
+    width: 360rpx;
+    height: 80rpx;
+    margin: 0rpx auto;
+    margin-bottom: 40rpx;
+    line-height: 80rpx;
+    text-align: center;
+    color: #fff;
+    background-color: #8A2432;
+    font-size: 28rpx;
+    border-radius: 5rem;
+}
+
+.card {
+    width: 80%;
+    margin: 0 auto;
+    left: 728rpx;
+    background: #EEEAE6;
+    border-radius: 80rpx;
+    padding: 80rpx 20rpx;
+}
+
+.cardTitle {
+    color: #C77176;
+    text-align: center;
+    font-weight: bold;
+    font-size: 32rpx;
+    line-height: 50rpx;
+    letter-spacing: 0.05em;
+}
+
+.applyCode {
+    width: 96%;
+    margin: 40rpx auto;
+    line-height: 65rpx;
+    font-size: 28rpx;
+}
+
+.copyCode {
+    border-radius: 5rem;
+    display: flex;
+}
+
+.code {
+    width: 70%;
+    color: #C77176;
+    padding-left: 30rpx;
+    border: 4rpx solid #C77176;
+    border-radius: 5rem 0 0 5rem;
+}
+
+.copy {
+    width: 30%;
+    background-color: #C77176;
+    color: #fff;
+    text-align: center;
+    border-radius: 0 5rem 5rem 0;
+}
+
+.msg {
+    font-size: 22rpx;
+    line-height: 35rpx;
+    letter-spacing: 0.03em;
+    color: #8A2432;
+    display: flex;
+    justify-content: center;
+}

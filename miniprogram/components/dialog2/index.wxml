@@ -1,0 +1,48 @@
+<view class="cardBody">
+    <view class="dialog">
+        <view class="closeImg">
+            <image mode="widthFix" src="../../images/close.png"></image>
+        </view>
+        <view class="dialogTitle">
+            <text>恭喜你！</text>
+        </view>
+        <view class="dialogImg">
+            <image mode="widthFix" src="../../images/19.png"></image>
+        </view>
+        <view class="dialogCont">
+            <view class="dialogContitle">
+                <text>成功获得价值109
+                    Saffronia抗焦虑软糖一份！</text>
+            </view>
+
+        </view>
+        <view class="card">
+            <view class="cardTitle">
+                <text>快复制下方优惠码，
+                    前往商城兑换吧！
+                </text>
+            </view>
+            <view class="applyCode">
+                <view class="copyCode">
+                    <view class="code">11122333124414</view>
+                    <view class="copy">复制</view>
+                </view>
+            </view>
+            <view class="footBtn">
+                <view>前往兑换</view>
+            </view>
+            <view class="msg">
+                <view>
+                    <text>*</text>
+                </view>
+                <view>
+                    <text>由于国家规定，跨境海淘商品需要报
+                        关，不支持0元单的情况，系统规则
+                        默认该笔订单需有0.01元支付动作，
+                        届时会退还至付款账户，请知悉。
+                    </text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

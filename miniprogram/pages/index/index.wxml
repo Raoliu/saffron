@@ -1,0 +1,61 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="body-card">
+    <view class="bg1">
+      <view class="logo">
+        <image mode="widthFix" src="../../images/Logo_Red.png"></image>
+      </view>
+      <image mode="widthFix" src="../../images/Group8.png"></image>
+    </view>
+    <view class="content">
+      <text>
+        我们选取了Lovibond等学者编制的
+        抑郁-焦虑- 压力自评量表
+        (The Depression Anxiety Stress Scale，DASS)，
+        通过7个自评问题，来帮你了解当前焦虑状态
+      </text>
+    </view>
+    <view class="moreInfo">
+      <view class="moreInfoBtn" bindtap="more">
+        <span>更多信息</span>
+      </view>
+    </view>
+    <!-- <button bindtap="to">跳转</button> -->
+  </view>
+  <view class="foot">
+    <view class="footBtn">开始测评</view>
+  </view>
+</view>
+<view class="toast" hidden="{{!showDialog}}">
+  <view class="dialog">
+    <view class="closeImg" bindtap="close">
+      <image mode="widthFix" src="../../images/close.png"></image>
+    </view>
+    <view class="dialogContent">
+      <text>
+        处在快节奏或繁琐压抑的日常生活中，很多人会低落、高兴不起来，对于很多事情都提不起兴趣，觉得自己很糟糕、绝望，没法让自己“积极”起来，总是很疲惫，无法起床，甚至感到乏力、记忆力减退。大家都在经历着上述这些抑郁、紧张、孤独等等，可能是大部分生活的常态，面对它们、和它们相处，是我们每一个人都要做的功课。
+
+        为了帮助自己更好地完成这项功课，让自己能在本就充满坎坷和挑战的生活中，能更好地去生活，我们需要先去了解这些状态、了解自己正在经历什么。
+
+        这项量表是国际上通用的对于抑郁焦虑压力状态的测量工具，经过验证，在中国人群中也有较高的信度和效度，可以作为你了解自己当前状态的参考。
+
+        仍然需要提示你:自评量表仅供你了解自己的状态使用，其解读、或具体精神/心理状态的诊断和评估，需要到专业的精神科医院进行哦。</text>
+    </view>
+    <view class="dialogFoot">
+      <view class="dialogFootBtn">
+        <view>你将获得</view>
+      </view>
+      <view class="dialogFootContent">
+        <view>
+          <image mode="widthFix" src="../../images/Frame.png"></image><text>了解emo等状态的表现</text>
+        </view>
+        <view>
+          <image mode="widthFix" src="../../images/Frame.png"></image><text>了解当前是否属于emo等状态</text>
+        </view>
+        <view>
+          <image mode="widthFix" src="../../images/Frame.png"></image><text>获得改善上述状态的建议方法</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

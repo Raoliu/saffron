@@ -1,0 +1,75 @@
+/* components/dialog1/index.wxss */
+.cardBody{
+    background-color: #EEEAE6;
+    border-top-right-radius: 40rpx;
+    padding-bottom: 80rpx;
+}
+.dialog{
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    top: 40rpx;
+    background-color: #F2D8DC;
+    border-radius: 40rpx;
+}
+.closeImg{
+    width:100%;
+    text-align: center;
+    padding: 40rpx 0;
+}
+.closeImg image{
+    width: 64rpx;
+}
+.dialogTitle{
+    color: #8A2432;
+    font-size: 64rpx;
+    font-weight: bold;
+    text-align: center;
+}
+.dialogImg{
+    width: 480rpx;
+    margin: 0rpx auto;
+    margin-top: 20rpx;
+}
+.dialogImg image{
+    width: 100%;
+}
+
+.dialogCont{
+    padding: 30rpx 0;
+    text-align: center;
+}
+.dialogContitle{
+    font-size: 30rpx;
+    color: #8A2432;
+    font-weight: bold;
+}
+.dialogContent{
+    font-size: 24rpx;
+    color: #8A2432;
+}
+
+.add{
+    display: flex;
+    padding: 30rpx 0;
+    justify-content: center;
+    gap: 40rpx;
+}
+.add>view{
+    border-radius: 5rem;
+    border: 4rpx solid #8A2432;
+}
+.add image{
+    width: 124rpx;
+}
+.footBtn{
+    width: 360rpx;
+    height: 80rpx;
+    margin: 0rpx auto;
+    line-height: 80rpx;
+    text-align: center;
+    color: #fff;
+    background-color: #8A2432;
+    font-size: 28rpx;
+    border-radius: 5rem;
+} 

@@ -1,0 +1,114 @@
+/* pages/login/login.wxss */
+page{
+    background-color: #8A2432;
+    height: 100%;
+  }
+.container {
+    width: 100%;
+    height: 100%;
+}
+.head{
+    background-color: #F2D8DC;
+    width: 100%;
+    height: 80%;
+    border-bottom-left-radius: 40rpx;
+    border-bottom-right-radius: 40rpx;
+    
+}
+.logo {
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.logo image {
+    width: 200rpx;
+    height: 82rpx;
+    margin: 40rpx auto;
+}
+
+.form{
+    width: 80%;
+    height: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20rpx;
+}
+.formInput{
+    position: relative;
+    width: 100%;
+}
+.formInput p{
+    line-height: 60rpx;
+    color: #C77176;
+    font-size: 28rpx;
+    font-weight: 400;
+    padding-left: 40rpx;
+}
+.formItem{
+    background-color: #C77176;
+    border-radius: 5rem;
+    height: 80rpx;
+    text-align: center;
+    color: #fff;
+    font-size:26rpx;
+}
+.msg{
+    position: absolute;
+    color: #F3B973;
+    font-size: 20rpx;
+    right: 40rpx;
+}
+.downImg{
+    position: absolute;
+    right: 50rpx;
+    top: 75rpx;
+}
+.downImg image{
+    width: 40rpx;
+    height: 40rpx;
+}
+.xieyiBox{
+    position: relative;
+    margin: 20rpx 0;
+}
+.xieyi{
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 24rpx;
+    color: #C77176;
+}
+.xyBox{
+    width: 10%;
+}
+.clickBox{
+    width: 35rpx;
+    height: 35rpx;
+    border-radius: 10rpx;
+    border: 7rpx solid #C77176;
+}
+.clickBox image{
+    width: 35rpx;
+    height: 35rpx;
+}
+.xyContent{
+    width: 90%;
+}
+.content{
+    text-decoration: underline;
+    font-weight: bold;
+    color: #8A2432;
+}
+.foot{
+    width:80%;
+    background-color: #EEEAE6;
+    color: #AA423E;
+    border-radius: 5rem;
+    text-align: center;
+    font-size: 36rpx;
+    line-height: 100rpx;
+    margin-top: 60rpx;
+    font-weight: bold;
+}

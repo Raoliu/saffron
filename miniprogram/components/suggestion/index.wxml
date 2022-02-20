@@ -1,0 +1,29 @@
+<!--components/suggestion/index.wxml-->
+<view class="cardBody">
+    <view class="suggest">
+        <view class="sugTitle"><text>你的emo状态处于中等，\n我们建议你:</text></view>
+        <view class="cardTag">
+            <view class="sugCardTitle">
+                <text class="sort">1</text>
+                <text class="sugCardTxt">尝试积极暗示，帮助自己更多建立自信。</text>
+            </view>
+            <view class="sugCardContent">
+                <tex>尤其是当不由自主地开始焦虑人际关系、他人评价,\n或者担心某些恶性的结果的时候，更多对自己进\n行积.极暗示，比如“不会有问题的”、“即便有问\n题，也会有解决办法”、“我做的很好”“ 别人没\n有对我有恶意.....积极暗示、帮助自己更强大地去\n面对工作生活。</tex>
+            </view>
+        </view>
+        <view class="cardTag">
+            <view class="sugCardTitle">
+                <text class="sort">2</text>
+                <text class="sugCardTxt">提高对不确定事物的容忍度。</text>
+            </view>
+            <view class="sugCardContent">
+                <text>对不确定性的容忍程度越高，越不容易产生emo的情感。想要提高对不确定行的容忍程度，最根本的是要从认知.上意识到事情的发展是具有反复性的。任何小小的成长，都要经过反复不断的挫折，进步，跌倒，进步，再跌倒，再进步....直到你终于真正的拥有了它。
+                
+                最后，emo的产生原因还有多种，如果你希望更多探索自己焦虑的原因和适合自己的调整办法，我们建议你可以寻找一位专业咨询师，更多了解自己。</text>
+            </view>
+        </view>
+        <view class="footBtn">
+                <view>获取抗emo软糖</view>
+        </view>
+    </view>
+</view>

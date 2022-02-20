@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "result1":"../../components/result1/index",
+    "suggestion":"../../components/suggestion/index",
+    "dialog1":"../../components/dialog1/index",
+    "dialog2":"../../components/dialog2/index"
+  }
+}

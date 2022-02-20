@@ -1,0 +1,25 @@
+<!--pages/question/index.wxml-->
+<view class="container">
+    <view class="card">
+        <view class="logo">
+            <image src="../../images/Logo_Red.png" mode="widthFix"></image>
+        </view>
+        <view class="last_question">
+            <view bindtap="lastQuestion"><image mode="widthFix" src="../../images/left.png"></image>上一题</view>
+        </view>
+        <view class="process">
+            <view class="pro processTotal"></view>
+            <view class="pro processed" style="width:{{process+'%'}};"></view>
+            <view class="processNum" style="{{process==100?'color:#fff;':''}}">{{process}}%</view>
+        </view>
+        <view class="questions">
+            <view class="title"><text>{{questions[index].q1}}</text></view>
+            <view class="options" wx:if="{{index<7}}">
+                <view class="optionItem" bindtap="choose" wx:for="{{answers}}" wx:key="i" wx:for-index="inx" data-inx="{{inx}}" style="{{questions[index].answer==inx?'color:#fff;background-color:#8A2432;':''}}">{{item}}</view>
+            </view>
+        </view>
+        <view class="foot">
+            <image mode="widthFix" src="../../images/Group50.png"></image>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,22 @@
+<!--pages/result/index.wxml-->
+<view class="container">
+    <view class="logo">
+        <image src="../../images/Logo_white.png" mode="widthFix"></image>
+    </view>
+    <view class="card">
+        <view class="tab">
+            <view class="tabItem {{!choosed?'choosed':''}}" bindtap="choose">你的emo体质</view>
+            <view class="tabItem {{choosed?'choosed':''}}" bindtap="choose">建议指南</view>
+        </view>
+        <block wx:if="{{!choosed}}">
+            <result1></result1>
+        </block>
+        <block wx:if="{{choosed}}">
+            <suggestion></suggestion>
+        </block>
+        <block wx:if="{{false}}">
+            <dialog1></dialog1>
+            <!-- <dialog2></dialog2> -->
+        </block>
+    </view>
+</view>

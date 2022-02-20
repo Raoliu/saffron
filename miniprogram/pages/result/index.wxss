@@ -1,0 +1,44 @@
+/* pages/result/index.wxss */
+page {
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: #8A2432;
+}
+
+.logo {
+    width: 200rpx;
+    margin: 40rpx auto;
+}
+
+.logo image {
+    width: 100%;
+}
+
+.card {
+    height: 80%;
+    width: 100%;
+}
+
+.tab {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.tabItem {
+    border-radius: 40rpx 40rpx 0 0;
+    width: 300rpx;
+    height: 86rpx;
+    line-height: 86rpx;
+    text-align: center;
+    background-color: #F2D8DC;
+    font-size: 28rpx;
+    color: #8A2432;
+}
+.choosed{
+    background-color: #EEEAE6;
+}

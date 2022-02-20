@@ -1,0 +1,33 @@
+<!--components/dialog1/index.wxml-->
+<view class="cardBody">
+    <view class="dialog">
+        <view class="closeImg">
+            <image mode="widthFix" src="../../images/close.png"></image>
+        </view>
+        <view class="dialogTitle">
+            <text>获取抗emo软糖</text>
+        </view>
+        <view class="dialogImg">
+            <image mode="widthFix" src="../../images/19.png"></image>
+        </view>
+        <view class="dialogCont">
+            <view class="dialogContitle">
+                <text>邀请两位好友成功参与测评</text>
+            </view>
+            <view class="dialogContent">
+                <text>
+                    即可获得价值109 
+                    Saffronia抗焦虑软糖一份！ 
+                    现在就快快分享吧~
+                </text>
+            </view>
+            <view class="add">
+                <view><image mode="widthFix" src="../../images/add.png"></image></view>
+                <view><image mode="widthFix" src="../../images/add.png"></image></view>
+            </view>
+            <view class="footBtn">
+                <view>邀请好友</view>
+            </view>
+        </view>
+    </view>
+</view>
