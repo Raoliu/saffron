@@ -5,7 +5,8 @@
             <image src="../../images/Logo_Red.png" mode="widthFix"></image>
         </view>
         <view class="last_question">
-            <view bindtap="lastQuestion"><image mode="widthFix" src="../../images/left.png"></image>上一题</view>
+            <view wx:if="{{process!=0}}" bindtap="lastQuestion"><image mode="widthFix" src="../../images/left.png"></image>上一题</view>
+            <view wx:else style="background-color: #999;"><image mode="widthFix" src="../../images/left.png"></image>上一题</view>
         </view>
         <view class="process">
             <view class="pro processTotal"></view>

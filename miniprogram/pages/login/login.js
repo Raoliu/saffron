@@ -78,6 +78,11 @@ Page({
     },
     submit(){
         console.log(this.data.form)
+        this.setData({
+            "rules.showMobileMsg":false,
+            "rules.showAreaMsg":false,
+            "rules.showBoxMsg":false,
+        })
         if(this.data.form.Phone==''){
             this.setData({
                 "rules.showMobileMsg":true
@@ -94,6 +99,14 @@ Page({
             })
         }
         if(this.data.form.Phone==''||this.data.choosed||this.data.form.Province=='') return;
+        api.SubmitPersonalInfo(this.data.form).then(res=>{
+            console.log(res)
+            if(res.data.code==0){
+                wx.navigateTo({
+                  url: '/pages/question/index',
+                })
+            }
+        })
     },
     /**
      * 生命周期函数--监听页面加载

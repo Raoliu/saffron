@@ -1,4 +1,5 @@
 // pages/question/index.js
+const app = getApp(),api = require("../../utils/api").API
 Page({
 
     /**
@@ -39,16 +40,43 @@ Page({
         answers: ['没有', '很少', '有一些', '中等', '很多']
     },
     choose(e) {
-        if(this.data.index==7) {
-            
-            return;
-        };
+        if(this.data.index==7) return;
         let that = this,questions = this.data.questions,index=this.data.index,inx = e.currentTarget.dataset.inx
         questions[that.data.index].answer = inx
         this.setData({
             process:((index+1)/7 * 100).toFixed(0),
             questions,
         })
+        if(this.data.index==6) {
+            console.log(this.data.questions)
+            let FormReturn = 0
+            this.data.questions.map(item=>{
+                FormReturn+=item.answer
+            })
+            let data = {
+                FormQA:this.data.questions.map(item=> this.data.answers[item.answer]),
+                FormReturn,
+                FormOpenID:'2341'
+            }
+            console.log(data)
+            api.SubmitAssess(data).then(res=>{
+                if(res.data.code==0){
+                    wx.navigateTo({
+                      url: '/pages/result/index',
+                    })
+                }else if(res.data.code==1){
+                    wx.showToast({
+                      title: res.data.message,
+                      icon:"none"
+                    })
+                    wx.navigateTo({
+                        url: '/pages/result/index',
+                      })
+                }else{
+                    app.getAuthKey()
+                }
+            })
+        };
         setTimeout(function () {
             that.setData({
                 index: index + 1
