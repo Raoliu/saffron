@@ -1,6 +1,7 @@
 // index.js
-// const app = getApp()
+const app = getApp()
 const { envList } = require('../../envList.js');
+let api = require("../../utils/api").API
 
 Page({
   data: {
@@ -11,6 +12,35 @@ Page({
     endy:0, //结束的位置y
     critical: 100, //触发翻页的临界值
     margintop:0,  //滑动下拉距离
+  },
+  onLoad(){
+    
+  },
+  getUserInfo(){
+    wx.getUserProfile({
+      desc: '用于完善用户资料', 
+      success: (res) => {
+        console.log(res)
+        wx.setStorageSync('userInfo', res.userInfo)
+        let data = {
+          iv:res.iv,
+          encryptedData:res.encryptedData,
+        }
+        // api.GetUserInfo().then(res=>{
+        //   console.log(res)
+        // })
+        api.UserInfo(data).then(res=>{
+          console.log(res)
+          if(res.data.code==0){
+            wx.navigateTo({
+              url: '/pages/login/login',
+            })
+          }
+        }).catch(err=>{
+          app.getAuthKey()
+        })
+      }
+    })
   },
   scrollTouchstart:function(e){
     let py = e.touches[0].pageY;

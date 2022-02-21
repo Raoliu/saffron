@@ -7,15 +7,16 @@
             </view>
             <view class="formInput">
                 <p>授权手机号</p>
-                <input class="formItem" />
-                <view class="msg">
+                <input wx:if="{{canClick}}" value="{{form.Phone}}" class="formItem" />
+                <button open-type="getPhoneNumber" bindgetphonenumber="getMobilePhone" wx:else class="formItem"></button>
+                <view class="msg" wx:if="{{rules.showMobileMsg}}">
                     <text>*必填项目</text>
                 </view>
             </view>
             <view class="formInput">
                 <p>性别</p>
                 <picker bindchange="bindPickerChangeSex" value="{{sexIndex}}" range="{{sexArray}}">
-                    <input class="formItem" disabled="true" value="{{form.sex}}" />
+                    <input class="formItem" disabled="true" value="{{form.Gender}}" />
                 </picker>
                 <view class="downImg">
                     <image mode="widthFix" src="../../images/down.png"></image>
@@ -24,7 +25,7 @@
             <view class="formInput">
                 <p>年龄</p>
                 <picker bindchange="bindPickerChangeAge" value="{{ageIndex}}" range="{{ageArray}}">
-                    <input class="formItem" disabled="true" value="{{form.age}}" />
+                    <input class="formItem" disabled="true" value="{{form.Age}}" />
                 </picker>
                 <view class="downImg">
                     <image mode="widthFix" src="../../images/down.png"></image>
@@ -33,12 +34,12 @@
             <view class="formInput">
                 <p>地域</p>
                 <picker mode="region" bindchange="bindRegionChange" value="{{region}}" range="{{customItem}}">
-                    <input class="formItem" disabled="true" value="{{form.area}}" />
+                    <input class="formItem" disabled="true" value="{{form.Province}} {{form.City}} {{form.Region}}" />
                 </picker>
                 <view class="downImg">
                     <image mode="widthFix" src="../../images/down.png"></image>
                 </view>
-                <view class="msg">
+                <view class="msg" wx:if="{{rules.showAreaMsg}}">
                     <text>*必填项目</text>
                 </view>
             </view>
@@ -53,14 +54,14 @@
                         <text>我已阅读<text class="content">个人信息保护政策</text>，并授权Unichi情绪测试收集使用上述个人信息。</text>
                     </view>
                 </view>
-                <view class="msg">
+                <view class="msg" wx:if="{{rules.showBoxMsg}}">
                     <text>*请勾选</text>
                 </view>
             </view>
         </view>
     </view>
     <view class="foot">
-        <view>
+        <view catchtap="submit">
             提交
         </view>
     </view>

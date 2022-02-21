@@ -23,7 +23,7 @@
     <!-- <button bindtap="to">跳转</button> -->
   </view>
   <view class="foot">
-    <view class="footBtn">开始测评</view>
+    <button bindtap="getUserInfo" class="footBtn">开始测评</button>
   </view>
 </view>
 <view class="toast" hidden="{{!showDialog}}">

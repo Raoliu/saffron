@@ -48,12 +48,13 @@ page{
     padding-left: 40rpx;
 }
 .formItem{
-    background-color: #C77176;
+    background-color: #C77176 !important;
     border-radius: 5rem;
     height: 80rpx;
     text-align: center;
-    color: #fff;
-    font-size:26rpx;
+    color: #fff !important;
+    font-size: 26rpx;
+    width: 100% !important;
 }
 .msg{
     position: absolute;
