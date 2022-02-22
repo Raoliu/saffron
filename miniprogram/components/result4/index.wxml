@@ -1,11 +1,10 @@
 <!--components/result1/index.wxml-->
 <view class="cardBody">
-
     <view class="cardTitle">
        <text>入夜低落丧体质</text>
     </view>
     <view class="cardPic">
-        <image mode="widthFix" class="result0_1" src="../../images/Component 4.png"></image>
+        <image mode="widthFix" class="result0_1" src="../../images/Component4.png"></image>
     </view>
     <view class="cardToast">
         <view class="cardToastTitle">

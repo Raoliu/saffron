@@ -107,7 +107,7 @@ Page({
         return {
             title:'我正在参与测评得奖品，你也来吧！',
             path:"pages/index/index?FormOpenID="+wx.getStorageSync('openId'),
-            imageUrl:'../../images/19.png',
+            imageUrl:'../../images/20.jpg',
             success(res){
                 console.log("转发成功:" + JSON.stringify(res));
             },

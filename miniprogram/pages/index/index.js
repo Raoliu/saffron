@@ -16,11 +16,42 @@ Page({
     margintop: 0, //滑动下拉距离
   },
   onLoad() {
+    this.getAuth()
+  },
+  getAuth(){
+    let that = this
     api.GetUserInfo().then(res=>{
       console.log(res)
-      if(res.data.data.IsSubmitPersonalInfo){
-        wx.redirectTo({
-          url: `/pages/result/index?FormReturn=${res.data.data.FormAssess.FormReturn}`,
+      if(res.data.code == 0){
+        if(res.data.data.IsSubmitPersonalInfo){
+          wx.redirectTo({
+            url: `/pages/result/index?FormReturn=${res.data.data.FormAssess.FormReturn}`,
+          })
+        }
+      }else if (res.data.code == 2000) {
+        wx.showModal({
+          content: "登录信息失效，点击确认登录",
+          confirmText: "确认",
+          success(res) {
+            console.log(res)
+            if(res.confirm){
+              app.getAuthKey().then(res=>{
+                console.log(res)
+                if(res.status==200){
+                  // wx.navigateTo({
+                  //   url: '/pages/login/login',
+                  // })
+                  wx.showToast({
+                    title: '登录成功',
+                    icon:"none"
+                  })
+                  setTimeout(function(){
+                    that.getAuth()
+                  },1500)
+                }
+              })
+            }
+          }
         })
       }
     })
@@ -35,9 +66,6 @@ Page({
           iv: res.iv,
           encryptedData: res.encryptedData,
         }
-        // api.GetUserInfo().then(res=>{
-        //   console.log(res)
-        // })
         api.UserInfo(data).then(res => {
           console.log(res)
           if (res.data.code == 0) {
@@ -54,9 +82,16 @@ Page({
                   app.getAuthKey().then(res=>{
                     console.log(res)
                     if(res.status==200){
-                      wx.navigateTo({
-                        url: '/pages/login/login',
+                      // wx.navigateTo({
+                      //   url: '/pages/login/login',
+                      // })
+                      wx.showToast({
+                        title: '登录成功',
+                        icon:"none"
                       })
+                      setTimeout(function(){
+                        that.getAuth()
+                      },1500)
                     }
                   })
                 }

@@ -28,7 +28,7 @@
                 <view><image class="addImg" mode="widthFix" src="../../images/+.png"></image></view>
             </view>
             <view class="footBtn">
-                <button open-type='share'>邀请好友</button>
+                <button open-type='share' hover-class="none">邀请好友</button>
             </view>
         </view>
     </view>

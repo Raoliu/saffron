@@ -5,7 +5,7 @@
         <text>敏感易伤心体质</text>
     </view>
     <view class="cardPic">
-        <image mode="widthFix" class="result0_1" src="../../images/Component 1.png"></image>
+        <image mode="widthFix" class="result0_1" src="../../images/Component1.png"></image>
     </view>
     <view class="cardToast">
         <view class="cardToastTitle">

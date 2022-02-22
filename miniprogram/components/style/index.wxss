@@ -50,7 +50,7 @@
     text-align: center;
 }
 .cardToastBody image{
-    width: 180rpx;
+    width: 130rpx;
     border-radius: 5rem;
 }
 .cardInfo{

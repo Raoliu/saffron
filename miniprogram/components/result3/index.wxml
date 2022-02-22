@@ -4,7 +4,7 @@
         <text>全世界都在狂欢\n只有我孤单体质</text>
     </view>
     <view class="cardPic">
-        <image mode="widthFix" class="result0_1" src="../../images/Component 3.png"></image>
+        <image mode="widthFix" class="result0_1" src="../../images/Component3.png"></image>
     </view>
     <view class="cardToast">
         <view class="cardToastTitle">

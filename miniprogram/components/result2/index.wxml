@@ -5,7 +5,7 @@
         <text>无限期拖延心慌体质</text>
     </view>
     <view class="cardPic">
-        <image mode="widthFix" class="result0_1" src="../../images/Component 2.png"></image>
+        <image mode="widthFix" class="result0_1" src="../../images/Component2.png"></image>
     </view>
     <view class="cardToast">
         <view class="cardToastTitle">
