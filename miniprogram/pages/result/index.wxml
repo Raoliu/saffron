@@ -5,18 +5,21 @@
     </view>
     <view class="card">
         <view class="tab">
-            <view class="tabItem {{!choosed?'choosed':''}}" bindtap="choose">你的emo体质</view>
-            <view class="tabItem {{choosed?'choosed':''}}" bindtap="choose">建议指南</view>
+            <view class="tabItem {{choosed==1?'choosed':''}}" bindtap="choose" data-index="1">你的emo体质</view>
+            <view class="tabItem {{choosed==2?'choosed':''}}" bindtap="choose" data-index="2">建议指南</view>
         </view>
-        <block wx:if="{{!choosed}}">
-            <result1></result1>
+        <block wx:if="{{choosed==1}}">
+            <result1 bindmyevent="myevent" wx:if="{{result==1&&!showDialog}}"></result1>
+            <result2 bindmyevent="myevent" wx:if="{{result==2&&!showDialog}}"></result2>
+            <result3 bindmyevent="myevent" wx:if="{{result==3&&!showDialog}}"></result3>
+            <result4 bindmyevent="myevent" wx:if="{{result==4&&!showDialog}}"></result4>
         </block>
-        <block wx:if="{{choosed}}">
-            <suggestion></suggestion>
+        <block wx:if="{{choosed==2&&!showDialog}}">
+            <suggestion bindmyevent="myevent"></suggestion>
         </block>
-        <block wx:if="{{false}}">
-            <dialog1></dialog1>
-            <!-- <dialog2></dialog2> -->
+        <block wx:if="{{showDialog}}">
+            <dialog1 wx:if="{{InviteList.length<2}}" InviteList="{{InviteList}}" bindmyevent="myevent"></dialog1>
+            <dialog2 wx:else bindmyevent="myevent"></dialog2>
         </block>
     </view>
 </view>

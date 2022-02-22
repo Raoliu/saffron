@@ -4,20 +4,31 @@ Component({
      * 组件的属性列表
      */
     properties: {
-
+        InviteList:{
+            type:Array
+        }
     },
 
     /**
      * 组件的初始数据
      */
     data: {
-
+        Avatar:'',
     },
-
+    ready(){
+        console.log("InviteList",this.properties.InviteList);
+        if(this.properties.InviteList.length==1){
+            this.setData({
+                Avatar:this.properties.InviteList[0].Avatar
+            })
+        }
+    },
     /**
      * 组件的方法列表
      */
     methods: {
-
+        hadleTap(){
+            this.triggerEvent('myevent',{params: "hide"},{})
+        },
     }
 })

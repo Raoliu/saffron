@@ -19,14 +19,17 @@
           "query": ""
         },
         {
-          "name": "pages/getOpenId/index",
-          "pathName": "pages/getOpenId/index",
-          "query": "",
-          "scene": null
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "FormOpenID=oBW1S5DhgiqjxDY_uZFMtkDdatZ8",
+          "scene": 1036,
+          "referrerInfo": {
+            "appId": "wxba0d0b0895b665fa"
+          }
         },
         {
-          "name": "pages/deployService/index",
-          "pathName": "pages/deployService/index",
+          "name": "默认启动页",
+          "pathName": "pages/index/index",
           "query": "",
           "scene": null
         },
@@ -57,6 +60,7 @@
         {
           "name": "pages/updateRecordSuccess/index",
           "pathName": "pages/updateRecordSuccess/index",
+          "query": "",
           "scene": null
         }
       ]

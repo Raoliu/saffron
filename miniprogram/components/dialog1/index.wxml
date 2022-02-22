@@ -1,7 +1,7 @@
 <!--components/dialog1/index.wxml-->
 <view class="cardBody">
     <view class="dialog">
-        <view class="closeImg">
+        <view class="closeImg" bindtap="hadleTap">
             <image mode="widthFix" src="../../images/close.png"></image>
         </view>
         <view class="dialogTitle">
@@ -22,11 +22,13 @@
                 </text>
             </view>
             <view class="add">
-                <view><image mode="widthFix" src="../../images/add.png"></image></view>
-                <view><image mode="widthFix" src="../../images/add.png"></image></view>
+                <view><image class="Avatar" wx:if="{{Avatar}}" mode="widthFix" src="{{Avatar}}"></image>
+                    <image class="addImg" wx:else mode="widthFix" src="../../images/+.png"></image>
+                </view>
+                <view><image class="addImg" mode="widthFix" src="../../images/+.png"></image></view>
             </view>
             <view class="footBtn">
-                <view>邀请好友</view>
+                <button open-type='share'>邀请好友</button>
             </view>
         </view>
     </view>

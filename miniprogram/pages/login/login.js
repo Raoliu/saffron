@@ -1,18 +1,19 @@
 // pages/login/login.js
 const app = getApp(),
-api = require("../../utils/api").API
+    api = require("../../utils/api").API
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        canClick:false,
-        choosed:true,
-        rules:{
-            showMobileMsg:false,
-            showAreaMsg:false,
-            showBoxMsg:false,
+        canClick: false,
+        choosed: true,
+        showDialog: false,
+        rules: {
+            showMobileMsg: false,
+            showAreaMsg: false,
+            showBoxMsg: false,
         },
         sexIndex: 0,
         sexArray: ['男', '女'],
@@ -23,32 +24,47 @@ Page({
         form: {
             Gender: '',
             Age: '',
-            Phone:'',
-            Province:'',
-            City:'',
-            Region:'',
+            Phone: '',
+            Province: '',
+            City: '',
+            Region: '',
         },
     },
+    //关闭弹窗
+    close() {
+        this.setData({
+            showDialog: false
+        })
+    },
+    showDialogFc(){
+        console.log("123")
+        this.setData({
+            showDialog: true
+        })
+    },
     //获取手机号
-    getMobilePhone(e){
+    getMobilePhone(e) {
         console.log(e.detail)
         let data = {
-            iv:e.detail.iv,
-            encryptedData:e.detail.encryptedData,
-        },that = this
-        api.PhoneNumber(data).then(res=>{
+                iv: e.detail.iv,
+                encryptedData: e.detail.encryptedData,
+            },
+            that = this
+        api.PhoneNumber(data).then(res => {
             console.log(res)
-            if(res.data.code==0){
+            if (res.data.code == 0) {
                 that.setData({
-                    "form.Phone":res.data.data,
-                    canClick:true
+                    "form.Phone": res.data.data,
+                    canClick: true
                 })
             }
         })
     },
     //勾选框
-    choose(){
-        this.setData({choosed:!this.data.choosed})
+    choose() {
+        this.setData({
+            choosed: !this.data.choosed
+        })
     },
     //选择性别
     bindPickerChangeSex(e) {
@@ -71,39 +87,39 @@ Page({
             region: e.detail.value,
         })
         this.setData({
-            "form.Province":this.data.region[0],
-            "form.City":this.data.region[1],
-            "form.Region":this.data.region[2],
+            "form.Province": this.data.region[0],
+            "form.City": this.data.region[1],
+            "form.Region": this.data.region[2],
         })
     },
-    submit(){
+    submit() {
         console.log(this.data.form)
         this.setData({
-            "rules.showMobileMsg":false,
-            "rules.showAreaMsg":false,
-            "rules.showBoxMsg":false,
+            "rules.showMobileMsg": false,
+            "rules.showAreaMsg": false,
+            "rules.showBoxMsg": false,
         })
-        if(this.data.form.Phone==''){
+        if (this.data.form.Phone == '') {
             this.setData({
-                "rules.showMobileMsg":true
+                "rules.showMobileMsg": true
             })
         }
-        if(this.data.form.Province==''){
+        if (this.data.form.Province == '') {
             this.setData({
-                "rules.showAreaMsg":true
+                "rules.showAreaMsg": true
             })
         }
-        if(this.data.choosed){
+        if (this.data.choosed) {
             this.setData({
-                "rules.showBoxMsg":true
+                "rules.showBoxMsg": true
             })
         }
-        if(this.data.form.Phone==''||this.data.choosed||this.data.form.Province=='') return;
-        api.SubmitPersonalInfo(this.data.form).then(res=>{
+        if (this.data.form.Phone == '' || this.data.choosed || this.data.form.Province == '') return;
+        api.SubmitPersonalInfo(this.data.form).then(res => {
             console.log(res)
-            if(res.data.code==0){
+            if (res.data.code == 0) {
                 wx.navigateTo({
-                  url: '/pages/question/index',
+                    url: '/pages/question/index',
                 })
             }
         })

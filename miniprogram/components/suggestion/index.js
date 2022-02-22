@@ -13,11 +13,12 @@ Component({
     data: {
 
     },
-
     /**
      * 组件的方法列表
      */
     methods: {
-
+        hadleTap(){
+            this.triggerEvent('myevent',{params: "show"},{})
+        },
     }
 })

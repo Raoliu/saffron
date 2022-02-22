@@ -12,6 +12,7 @@ const API = {
     GetUserInfo: (data) => request(POST, `Api/All/GetUserInfo`,data),
     PhoneNumber: (data) => request(POST, `Api/All/PhoneNumber`,data),
     SubmitAssess: (data) => request(POST, `Api/All/SubmitAssess`,data),
+    InviteInfo: (data) => request(POST, `Api/All/InviteInfo`,data),
 };
 module.exports = {
     API: API

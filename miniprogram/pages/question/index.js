@@ -1,5 +1,6 @@
 // pages/question/index.js
-const app = getApp(),api = require("../../utils/api").API
+const app = getApp(),
+    api = require("../../utils/api").API
 Page({
 
     /**
@@ -40,39 +41,44 @@ Page({
         answers: ['没有', '很少', '有一些', '中等', '很多']
     },
     choose(e) {
-        if(this.data.index==7) return;
-        let that = this,questions = this.data.questions,index=this.data.index,inx = e.currentTarget.dataset.inx
+        if (this.data.index == 7) return;
+        let that = this,
+            questions = this.data.questions,
+            index = this.data.index,
+            inx = e.currentTarget.dataset.inx
         questions[that.data.index].answer = inx
         this.setData({
-            process:((index+1)/7 * 100).toFixed(0),
+            process: ((index + 1) / 7 * 100).toFixed(0),
             questions,
         })
-        if(this.data.index==6) {
+        if (this.data.index == 6) {
             console.log(this.data.questions)
             let FormReturn = 0
-            this.data.questions.map(item=>{
-                FormReturn+=item.answer
+            this.data.questions.map(item => {
+                FormReturn += item.answer
             })
             let data = {
-                FormQA:this.data.questions.map(item=> this.data.answers[item.answer]),
+                FormQA: this.data.questions.map(item => this.data.answers[item.answer]),
                 FormReturn,
-                FormOpenID:'2341'
+                FormOpenID: app.globalData.FormOpenID
             }
             console.log(data)
-            api.SubmitAssess(data).then(res=>{
-                if(res.data.code==0){
+            api.SubmitAssess(data).then(res => {
+                if (res.data.code == 0) {
                     wx.navigateTo({
-                      url: '/pages/result/index',
+                        url: `/pages/result/index?FormReturn=${data.FormReturn}`,
                     })
-                }else if(res.data.code==1){
+                } else if (res.data.code == 1) {
                     wx.showToast({
-                      title: res.data.message,
-                      icon:"none"
+                        title: res.data.message,
+                        icon: "none"
                     })
-                    wx.navigateTo({
-                        url: '/pages/result/index',
-                      })
-                }else{
+                    setTimeout(function(){
+                        wx.navigateTo({
+                            url: `/pages/result/index?FormReturn=${data.FormReturn}`,
+                        })
+                    },1500)
+                } else {
                     app.getAuthKey()
                 }
             })
@@ -83,15 +89,16 @@ Page({
             })
         }, 500)
     },
-    lastQuestion(){
-        if(this.data.index==0) return;
-        let questions = this.data.questions,index=this.data.index
-        questions[this.data.index-1].answer = -1
+    lastQuestion() {
+        if (this.data.index == 0) return;
+        let questions = this.data.questions,
+            index = this.data.index
+        questions[this.data.index - 1].answer = -1
         this.setData({
             questions,
-            process:((index-1)/7 * 100).toFixed(0),
-            index: index - 1 
-            })
+            process: ((index - 1) / 7 * 100).toFixed(0),
+            index: index - 1
+        })
     },
     /**
      * 生命周期函数--监听页面加载

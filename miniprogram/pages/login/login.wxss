@@ -113,3 +113,42 @@ page{
     margin-top: 60rpx;
     font-weight: bold;
 }
+
+
+.toast{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-color: #8A2432;
+  }
+  .dialog{
+    position: fixed;
+    height: 95vh;
+    width: 100vw;
+    top: 5vh;
+    left: 0;
+    background-color: #F2D8DC;
+    border-top-left-radius: 40rpx;
+    border-top-right-radius: 40rpx;
+    overflow: hidden;
+    overflow-y: scroll;
+  }
+  .closeImg{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 40rpx;
+  }
+  .closeImg image{
+    width: 50rpx;
+    height: 50rpx;
+  }
+  .dialogContent{
+    text-align: left;
+    width: 650rpx;
+    margin: 40rpx auto;
+    font-size: 24rpx;
+    color: #8A2432;
+  }

@@ -1,6 +1,6 @@
 <view class="cardBody">
     <view class="dialog">
-        <view class="closeImg">
+        <view class="closeImg" bindtap="hadleTap">
             <image mode="widthFix" src="../../images/close.png"></image>
         </view>
         <view class="dialogTitle">
@@ -24,12 +24,12 @@
             </view>
             <view class="applyCode">
                 <view class="copyCode">
-                    <view class="code">11122333124414</view>
-                    <view class="copy">复制</view>
+                    <view class="code">{{contents}}</view>
+                    <view class="copy" bindtap='copyText' data-text="{{contents}}">复制</view>
                 </view>
             </view>
             <view class="footBtn">
-                <view>前往兑换</view>
+                <view bindtap="to">前往兑换</view>
             </view>
             <view class="msg">
                 <view>

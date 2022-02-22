@@ -4,7 +4,9 @@
 .cardTitle {
     -webkit-text-stroke: 1px #C77176;
     color: transparent;
-    font-size: 76rpx;
+    font-size: 70rpx;
+    /* line-height: 150rpx; */
+    padding: 20rpx 0;
 }
 .cardPic{
     position: relative;
@@ -36,13 +38,13 @@
     width: 38rpx;
 }
 .cardToastBody{
-   width: 70%;
+   width: 80%;
    margin: 40rpx auto; 
    display: flex;
    justify-content: center;
 }
 .codeText{
-    width: 40%;
+    width: 35%;
     font-size: 24rpx;
     color: #8A2432;
     text-align: center;
@@ -52,7 +54,7 @@
     border-radius: 5rem;
 }
 .cardInfo{
-    width: 60%;
+    width: 65%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -82,16 +84,16 @@
 }
 .footContent{
     display: flex;
-    gap: 20rpx;
+    gap: 10rpx;
 }
 .footImg{
-    width: 40%;
+    width: 34%;
 }
 .footImg image{
     width: 180rpx;
 }
 .footTxt{
-    width: 60%;
+    width: 66%;
     display: grid;
 }
 .footContentTitle{
@@ -106,7 +108,7 @@
 .footContentFoot{
     font-size: 24rpx;
     color: #C77176;
-    font-size: 600;
+    font-weight: 600;
 }
 .footBtn{
     width: 360rpx;

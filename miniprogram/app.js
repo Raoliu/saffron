@@ -1,8 +1,15 @@
 // app.js
 let api = require("./utils/api").API
 App({
-  onLaunch: function () {
-    // this.getAuthKey()
+  globalData:{
+    FormOpenID:''
+  },
+  onLaunch: function (e) {
+    console.log(e)
+    if(e.query.FormOpenID){
+      console.log(e.query.FormOpenID)
+      this.globalData.FormOpenID = e.query.FormOpenID
+    }
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力');
     } else {
@@ -16,7 +23,9 @@ App({
       });
     }
 
-    this.globalData = {};
+    // this.globalData = {
+    //   FormOpenID:''
+    // };
   },
   getAuthKey:function(){
     return new Promise((resolve,reject)=>{

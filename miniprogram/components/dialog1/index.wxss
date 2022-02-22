@@ -57,10 +57,20 @@
 }
 .add>view{
     border-radius: 5rem;
-    border: 4rpx solid #8A2432;
+    border: 10rpx solid #AA423E;
+    background-color: #EEEAE6;
+    width: 120rpx;
+    height: 120rpx;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
-.add image{
-    width: 124rpx;
+.addImg{
+    width: 40rpx;
+}
+.Avatar{
+    width: 100%;
+    border-radius: 5rem;
 }
 .footBtn{
     width: 360rpx;
@@ -68,8 +78,16 @@
     margin: 0rpx auto;
     line-height: 80rpx;
     text-align: center;
-    color: #fff;
+    
     background-color: #8A2432;
     font-size: 28rpx;
     border-radius: 5rem;
 } 
+.footBtn button{
+    color: #fff !important;
+    font-weight: 400 !important;
+    font-size: 28rpx !important;
+    height: 80rpx;
+    line-height: 80rpx;
+    padding: 0;
+}
