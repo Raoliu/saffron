@@ -14,6 +14,8 @@ Page({
             showMobileMsg: false,
             showAreaMsg: false,
             showBoxMsg: false,
+            showAgeMsg: false,
+            showGenderMsg: false,
         },
         sexIndex: 0,
         sexArray: ['男', '女'],
@@ -98,6 +100,8 @@ Page({
             "rules.showMobileMsg": false,
             "rules.showAreaMsg": false,
             "rules.showBoxMsg": false,
+            "rules.showAgeMsg": false,
+            "rules.showGenderMsg": false,
         })
         if (this.data.form.Phone == '') {
             this.setData({
@@ -109,12 +113,22 @@ Page({
                 "rules.showAreaMsg": true
             })
         }
+        if (this.data.form.Gender == '') {
+            this.setData({
+                "rules.showGenderMsg": true
+            })
+        }
+        if (this.data.form.Age == '') {
+            this.setData({
+                "rules.showAgeMsg": true
+            })
+        }
         if (this.data.choosed) {
             this.setData({
                 "rules.showBoxMsg": true
             })
         }
-        if (this.data.form.Phone == '' || this.data.choosed || this.data.form.Province == '') return;
+        if (this.data.form.Phone == '' || this.data.choosed || this.data.form.Province == '' || this.data.form.Age == '' || this.data.form.Gender == '') return;
         api.SubmitPersonalInfo(this.data.form).then(res => {
             console.log(res)
             if (res.data.code == 0) {

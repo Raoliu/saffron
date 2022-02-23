@@ -19,7 +19,7 @@
         </block>
         <block wx:if="{{showDialog}}">
             <dialog1 wx:if="{{InviteList.length<2}}" InviteList="{{InviteList}}" bindmyevent="myevent"></dialog1>
-            <dialog2 wx:else bindmyevent="myevent"></dialog2>
+            <dialog2 wx:else bindmyevent="myevent" code="{{code}}"></dialog2>
         </block>
     </view>
 </view>

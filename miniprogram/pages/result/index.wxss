@@ -35,10 +35,10 @@ page {
     height: 86rpx;
     line-height: 86rpx;
     text-align: center;
-    background-color: #F2D8DC;
     font-size: 28rpx;
     color: #8A2432;
+    background-color: #EEEAE6;
 }
 .choosed{
-    background-color: #EEEAE6;
+    background-color: #F2D8DC;
 }

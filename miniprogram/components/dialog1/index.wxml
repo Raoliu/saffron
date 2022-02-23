@@ -28,7 +28,8 @@
                 <view><image class="addImg" mode="widthFix" src="../../images/+.png"></image></view>
             </view>
             <view class="footBtn">
-                <button open-type='share' hover-class="none">邀请好友</button>
+                <view wx:if="{{auth}}" bindtap="xiaoxi">邀请好友</view>
+                <button wx:else open-type='share' hover-class="none">邀请好友</button>
             </view>
         </view>
     </view>

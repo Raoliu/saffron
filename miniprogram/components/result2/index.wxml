@@ -19,7 +19,7 @@
         </view>
         <view class="cardToastBody">
             <view class="codeText">
-                <image mode="widthFix" src="../../images/codeImage.png"></image>
+                <image mode="widthFix" bindlongpress="saveImage" src="../../images/codeImage.png"></image>
                 <view><text>长按保存结果，\n邀请好友一起测</text></view>
             </view>
             <view class="cardInfo">

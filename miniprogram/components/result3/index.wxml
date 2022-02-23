@@ -18,7 +18,7 @@
         </view>
         <view class="cardToastBody">
             <view class="codeText">
-                <image mode="widthFix" src="../../images/codeImage.png"></image>
+                <image mode="widthFix" data-url="../../images/codeImage.png" bindlongtap="longPressSaveImg" src="../../images/codeImage.png"></image>
                 <view><text>长按保存结果，\n邀请好友一起测</text></view>
             </view>
             <view class="cardInfo">
@@ -33,6 +33,9 @@
                 </view>
             </view>
         </view>
+
+        <canvas type="2d" id="myCanvas"></canvas>
+
         <view class="foot">
             <view class="footContent">
                 <view class="footImg">

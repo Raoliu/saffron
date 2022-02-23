@@ -34,8 +34,8 @@
           "scene": null
         },
         {
-          "name": "pages/selectRecord/index",
-          "pathName": "pages/selectRecord/index",
+          "name": "pages/question/index",
+          "pathName": "pages/question/index",
           "query": "",
           "scene": null
         },

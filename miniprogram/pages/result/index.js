@@ -9,7 +9,8 @@ Page({
         choosed: 1,
         showDialog: false,
         result:0,
-        InviteList:[{Avatar:"https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83erLqxHTeMX0qBmmvdUGe6UkjqJKLmFOzYxtWxY9LHLdXaXWo18YzicficENCfwSvicTkJZJKEwtGKPJw/132"}]
+        InviteList:[],
+        code:''
     },
     getInviteInfo(){
         let that = this
@@ -53,6 +54,13 @@ Page({
             this.setData({result:3})
         }else{
             this.setData({result:4})
+        }
+        console.log(options.code)
+        if(options.code!="null"){
+            this.setData({
+                showDialog:true,
+                code:options.code
+            })
         }
         this.getInviteInfo()
     },

@@ -141,6 +141,7 @@ page{
     text-align: center;
     position: relative;
     top: 40rpx;
+    padding-bottom: 40rpx;
   }
   .closeImg image{
     width: 50rpx;

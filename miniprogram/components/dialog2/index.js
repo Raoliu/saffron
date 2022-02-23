@@ -4,14 +4,16 @@ Component({
      * 组件的属性列表
      */
     properties: {
-
+        code:{
+            type:String
+        }
     },
 
     /**
      * 组件的初始数据
      */
     data: {
-        contents: "524654564654654"
+        contents: ""
     },
 
     /**

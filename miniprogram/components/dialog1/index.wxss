@@ -3,6 +3,8 @@
     background-color: #EEEAE6;
     border-top-right-radius: 40rpx;
     padding-bottom: 80rpx;
+    position: relative;
+    top: -2rpx;
 }
 .dialog{
     width: 80%;
@@ -78,7 +80,7 @@
     margin: 0rpx auto;
     line-height: 80rpx;
     text-align: center;
-    
+    color: #fff;
     background-color: #8A2432;
     font-size: 28rpx;
     border-radius: 5rem;

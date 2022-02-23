@@ -11,6 +11,7 @@
     top: 5vh;
     background-color: #F2D8DC;
     border-radius: 40rpx 40rpx 0 0;
+    overflow: hidden;
 }
 .logo{
     width: 100%;
@@ -104,14 +105,12 @@
 .foot{
     /* width: 100%; */
     /* position: relative; */
-    position: fixed;
-    bottom: 50rpx;
-    right: 50rpx;
+    position: relative;
+    /* bottom: 50rpx;
+    right: 50rpx; */
 }
 .foot image{
-    width: 100rpx;
-    height: 100rpx;
-    /* position: absolute;
+    width: 25%;
+    position: absolute;
     right: 50rpx;
-    top: 20rpx; */
 }

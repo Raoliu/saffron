@@ -14,6 +14,7 @@ Component({
      */
     data: {
         Avatar:'',
+        auth:true,
     },
     ready(){
         console.log("InviteList",this.properties.InviteList);
@@ -30,5 +31,16 @@ Component({
         hadleTap(){
             this.triggerEvent('myevent',{params: "hide"},{})
         },
+        xiaoxi(){
+            let that = this
+            wx.requestSubscribeMessage({
+                tmplIds: ["0tMeVIhxXFSWTzY7G1MYB_3lzugQQqXa6qznDZZVmh8"],
+                success (res) { 
+                   that.setData({
+                    auth:false
+                   }) 
+                }
+              })
+        }
     }
 })
