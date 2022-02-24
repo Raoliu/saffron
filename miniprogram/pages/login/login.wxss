@@ -89,6 +89,8 @@ page{
     height: 35rpx;
     border-radius: 10rpx;
     border: 7rpx solid #C77176;
+    display: flex;
+    align-items: center;
 }
 .clickBox image{
     width: 35rpx;

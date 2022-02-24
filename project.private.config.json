@@ -1,69 +1,69 @@
 {
-  "setting": {},
-  "condition": {
-    "plugin": {
-      "list": []
-    },
-    "game": {
-      "list": []
-    },
-    "gamePlugin": {
-      "list": []
-    },
-    "miniprogram": {
-      "list": [
-        {
-          "id": -1,
-          "name": "db guide",
-          "pathName": "pages/databaseGuide/databaseGuide",
-          "query": ""
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
         },
-        {
-          "name": "pages/index/index",
-          "pathName": "pages/index/index",
-          "query": "FormOpenID=oBW1S5DhgiqjxDY_uZFMtkDdatZ8",
-          "scene": 1036,
-          "referrerInfo": {
-            "appId": "wxba0d0b0895b665fa"
-          }
+        "game": {
+            "list": []
         },
-        {
-          "name": "默认启动页",
-          "pathName": "pages/index/index",
-          "query": "",
-          "scene": null
+        "gamePlugin": {
+            "list": []
         },
-        {
-          "name": "pages/question/index",
-          "pathName": "pages/question/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/login/index",
-          "pathName": "pages/login/login",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/updateRecord/index",
-          "pathName": "pages/updateRecord/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/updateRecordResult/index",
-          "pathName": "pages/updateRecordResult/index",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/updateRecordSuccess/index",
-          "pathName": "pages/updateRecordSuccess/index",
-          "query": "",
-          "scene": null
+        "miniprogram": {
+            "list": [
+                {
+                    "id": -1,
+                    "name": "db guide",
+                    "pathName": "pages/databaseGuide/databaseGuide",
+                    "query": ""
+                },
+                {
+                    "name": "pages/index/index",
+                    "pathName": "pages/index/index",
+                    "query": "FormOpenID=oBW1S5DhgiqjxDY_uZFMtkDdatZ8",
+                    "scene": 1036,
+                    "referrerInfo": {
+                        "appId": "wxba0d0b0895b665fa"
+                    }
+                },
+                {
+                    "name": "默认启动页",
+                    "pathName": "pages/index/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/question/index",
+                    "pathName": "pages/question/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/login/index",
+                    "pathName": "pages/login/login",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/result/index",
+                    "pathName": "pages/result/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/updateRecordResult/index",
+                    "pathName": "pages/updateRecordResult/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/updateRecordSuccess/index",
+                    "pathName": "pages/updateRecordSuccess/index",
+                    "query": "",
+                    "scene": null
+                }
+            ]
         }
-      ]
     }
-  }
 }

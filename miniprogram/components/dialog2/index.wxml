@@ -24,7 +24,7 @@
             </view>
             <view class="applyCode">
                 <view class="copyCode">
-                    <view class="code">{{contents}}</view>
+                    <view class="code">{{code}}</view>
                     <view class="copy" bindtap='copyText' data-text="{{code}}">复制</view>
                 </view>
             </view>

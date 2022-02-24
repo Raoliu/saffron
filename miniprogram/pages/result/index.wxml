@@ -5,8 +5,8 @@
     </view>
     <view class="card">
         <view class="tab">
-            <view class="tabItem {{choosed==1?'choosed':''}}" bindtap="choose" data-index="1">你的emo体质</view>
-            <view class="tabItem {{choosed==2?'choosed':''}}" bindtap="choose" data-index="2">建议指南</view>
+            <view class="tabItem choosed" bindtap="choose" data-index="1">你的emo体质</view>
+            <view class="tabItem" bindtap="choose" data-index="2">建议指南</view>
         </view>
         <block wx:if="{{choosed==1}}">
             <!-- <result1 bindmyevent="myevent" wx:if="{{result==1&&!showDialog}}"></result1>

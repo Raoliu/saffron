@@ -23,7 +23,6 @@ Page({
     api.GetUserInfo().then(res => {
       console.log(res)
       if (res.data.code == 0) {
-        wx.setStorageSync('code', res.data.data.RewardInfo.Code)
         if (res.data.data.IsSubmitPersonalInfo) {
           wx.redirectTo({
             url: `/pages/result/index?FormReturn=${res.data.data.FormAssess.FormReturn}&code=${res.data.data.RewardInfo.Code}`,

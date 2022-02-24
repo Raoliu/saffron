@@ -9,17 +9,23 @@ Page({
         choosed: 1,
         showDialog: false,
         result:1,
-        InviteList:[],
+        InviteList:[
+            // {Avatar:"https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83erLqxHTeMX0qBmmvdUGe6UkjqJKLmFOzYxtWxY9LHLdXaXWo18YzicficENCfwSvicTkJZJKEwtGKPJw/132"},
+            // {Avatar:"https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83erLqxHTeMX0qBmmvdUGe6UkjqJKLmFOzYxtWxY9LHLdXaXWo18YzicficENCfwSvicTkJZJKEwtGKPJw/132"},
+        ],
         code:''
     },
     getInviteInfo(){
         let that = this
         api.InviteInfo().then(res=>{
-            console.log(res)
             if(res.data.code==0){
+                if(res.data.data.InviteList.length==2){
+                    that.setData({showDialog:true,})
+                }
                 that.setData({
                     InviteList:res.data.data.InviteList
                 })
+                // console.log(that.data.InviteList)
             }
         })
     },
@@ -45,7 +51,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        console.log(options.FormReturn)
+        console.log(options)
         if(options.FormReturn<=5){
             this.setData({result:1})
         }else if(options.FormReturn>5&&options.FormReturn<=10){
@@ -58,10 +64,14 @@ Page({
         console.log(options.code)
         if(options.code!="null"){
             this.setData({
-                showDialog:true,
                 code:options.code
             })
         }
+        // if(options.IsSubmitPersonalInfo=="true"){
+        //     this.setData({
+        //         showDialog:true,
+        //     })
+        // }
         this.getInviteInfo()
     },
 

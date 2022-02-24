@@ -101,6 +101,7 @@
     padding-left: 30rpx;
     border: 4rpx solid #C77176;
     border-radius: 5rem 0 0 5rem;
+    letter-spacing: 5rpx;
 }
 
 .copy {

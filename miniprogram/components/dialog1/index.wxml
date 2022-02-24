@@ -24,8 +24,8 @@
             <view class="add">
                 <view>
                     <image class="Avatar" wx:if="{{Avatar}}" mode="widthFix" src="{{Avatar}}"></image>
-                    <image class="addImg" hidden="{{!auth}}" bindtap="xiaoxi" mode="widthFix" src="../../images/+.png"></image>
-                    <button hidden="{{auth}}" open-type='share' hover-class="none"><image class="addImg" mode="widthFix" src="../../images/+.png"></image></button>
+                    <image class="addImg" hidden="{{!auth||Avatar}}" bindtap="xiaoxi" mode="widthFix" src="../../images/+.png"></image>
+                    <button hidden="{{auth||Avatar}}" open-type='share' hover-class="none"><image class="addImg" mode="widthFix" src="../../images/+.png"></image></button>
                 </view>
                 <view>
                     <image hidden="{{!auth}}" class="addImg" bindtap="xiaoxi" mode="widthFix" src="../../images/+.png"></image>
