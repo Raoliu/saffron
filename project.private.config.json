@@ -40,8 +40,8 @@
           "scene": null
         },
         {
-          "name": "pages/sumRecordResult/index",
-          "pathName": "pages/sumRecordResult/index",
+          "name": "pages/login/index",
+          "pathName": "pages/login/login",
           "query": "",
           "scene": null
         },

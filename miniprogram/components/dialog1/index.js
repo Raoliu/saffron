@@ -4,8 +4,8 @@ Component({
      * 组件的属性列表
      */
     properties: {
-        InviteList:{
-            type:Array
+        InviteList: {
+            type: Array
         }
     },
 
@@ -13,14 +13,14 @@ Component({
      * 组件的初始数据
      */
     data: {
-        Avatar:'',
-        auth:true,
+        Avatar: '',
+        auth: true,
     },
-    ready(){
-        console.log("InviteList",this.properties.InviteList);
-        if(this.properties.InviteList.length==1){
+    ready() {
+        console.log("InviteList", this.properties.InviteList);
+        if (this.properties.InviteList.length == 1) {
             this.setData({
-                Avatar:this.properties.InviteList[0].Avatar
+                Avatar: this.properties.InviteList[0].Avatar
             })
         }
     },
@@ -28,19 +28,22 @@ Component({
      * 组件的方法列表
      */
     methods: {
-        hadleTap(){
-            this.triggerEvent('myevent',{params: "hide"},{})
+        hadleTap() {
+            this.triggerEvent('myevent', {
+                params: "hide"
+            }, {})
         },
-        xiaoxi(){
+        xiaoxi() {
             let that = this
             wx.requestSubscribeMessage({
                 tmplIds: ["0tMeVIhxXFSWTzY7G1MYB_3lzugQQqXa6qznDZZVmh8"],
-                success (res) { 
-                   that.setData({
-                    auth:false
-                   }) 
+                success(res) {
+                    console.log(res)
+                    that.setData({
+                        auth: false
+                    })
                 }
-              })
+            })
         }
     }
 })

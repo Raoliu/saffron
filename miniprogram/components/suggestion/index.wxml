@@ -4,7 +4,7 @@
         <view class="sugTitle"><text>你的emo状态处于中等，\n我们建议你:</text></view>
         <view class="cardTag">
             <view class="sugCardTitle">
-                <text class="sort">1</text>
+                <text class="sort">1 </text>
                 <text class="sugCardTxt">尝试积极暗示，帮助自己更多建立自信。</text>
             </view>
             <view class="sugCardContent">
@@ -13,7 +13,7 @@
         </view>
         <view class="cardTag">
             <view class="sugCardTitle">
-                <text class="sort">2</text>
+                <text class="sort">2 </text>
                 <text class="sugCardTxt">提高对不确定事物的容忍度。</text>
             </view>
             <view class="sugCardContent">

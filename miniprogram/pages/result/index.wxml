@@ -9,10 +9,10 @@
             <view class="tabItem {{choosed==2?'choosed':''}}" bindtap="choose" data-index="2">建议指南</view>
         </view>
         <block wx:if="{{choosed==1}}">
-            <result1 bindmyevent="myevent" wx:if="{{result==1&&!showDialog}}"></result1>
+            <!-- <result1 bindmyevent="myevent" wx:if="{{result==1&&!showDialog}}"></result1>
             <result2 bindmyevent="myevent" wx:if="{{result==2&&!showDialog}}"></result2>
-            <result3 bindmyevent="myevent" wx:if="{{result==3&&!showDialog}}"></result3>
-            <result4 bindmyevent="myevent" wx:if="{{result==4&&!showDialog}}"></result4>
+            <result3 bindmyevent="myevent" wx:if="{{result==3&&!showDialog}}"></result3> -->
+            <result4 bindmyevent="myevent" status="{{result}}" wx:if="{{!showDialog}}"></result4>
         </block>
         <block wx:if="{{choosed==2&&!showDialog}}">
             <suggestion bindmyevent="myevent"></suggestion>

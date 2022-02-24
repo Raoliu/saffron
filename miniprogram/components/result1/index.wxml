@@ -1,14 +1,13 @@
 <!--components/result1/index.wxml-->
 <view class="cardBody">
-
-    <view class="cardTitle">
+    <!-- <view class="cardTitle">
         <text>敏感易伤心体质</text>
-    </view>
+    </view> -->
     <view class="cardPic">
         <image mode="widthFix" class="result0_1" src="../../images/Component1.png"></image>
     </view>
     <view class="cardToast">
-        <view class="cardToastTitle">
+        <!-- <view class="cardToastTitle">
             <image mode="widthFix" src="../../images/Candy3.png"></image>
             <image mode="widthFix" src="../../images/Candy3.png"></image>
             <image mode="widthFix" src="../../images/Candy3.png"></image>
@@ -33,7 +32,7 @@
                     <text class="cardInfoItem">进食少量甜食</text>
                 </view>
             </view>
-        </view>
+        </view> -->
         <view class="foot">
             <view class="footContent">
                 <view class="footImg">

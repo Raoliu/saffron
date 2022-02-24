@@ -24,6 +24,7 @@
 .sort{
     font-size: 88rpx;
     font-weight: bold;
+    font-family: Neue Helvetica Pro;
 }
 .sugCardTxt{
     font-size: 28rpx;

@@ -14,7 +14,7 @@
     width: 100%;
     height: auto;
     text-align: center;
-    margin-bottom: 20rpx;
+    padding: 40rpx 0;
 }
 
 .result0_1{

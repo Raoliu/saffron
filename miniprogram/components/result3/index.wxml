@@ -33,9 +33,6 @@
                 </view>
             </view>
         </view>
-
-        <canvas type="2d" id="myCanvas"></canvas>
-
         <view class="foot">
             <view class="footContent">
                 <view class="footImg">

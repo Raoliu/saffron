@@ -1,13 +1,13 @@
 <!--components/result1/index.wxml-->
 <view class="cardBody">
-    <view class="cardTitle">
+    <!-- <view class="cardTitle">
        <text>入夜低落丧体质</text>
-    </view>
+    </view> -->
     <view class="cardPic">
-        <image mode="widthFix" class="result0_1" src="../../images/Component4.png"></image>
+        <image bindlongtap="saveImg" mode="widthFix" class="result0_1" src="{{'../../images/Component'+status+'.png'}}"></image>
     </view>
     <view class="cardToast">
-        <view class="cardToastTitle">
+        <!-- <view class="cardToastTitle">
             <image mode="widthFix" src="../../images/Candy3.png"></image>
             <image mode="widthFix" src="../../images/Candy3.png"></image>
             <image mode="widthFix" src="../../images/Candy3.png"></image>
@@ -32,16 +32,16 @@
                     <text class="cardInfoItem">尝试中强度运动</text>
                 </view>
             </view>
-        </view>
+        </view> -->
         <view class="foot">
-            <view class="footContent">
+            <view class="footContent" bindtap="to">
                 <view class="footImg">
-                    <image mode="widthFix" src="../../images/suger4.png"></image>
+                    <image mode="widthFix" src="{{result[status-1].image}}"></image>
                 </view>
                 <view class="footTxt">
-                    <view class="footContentTitle"><text>配合Saffronia抗emo抚压片</text></view>
-                    <view class="footContentBody"><text>每颗抚压片含15毫克\nNGH-21™核心抗焦emo成份</text></view>
-                    <view class="footContentFoot"><text>放松心情，香甜好睡眠</text></view>
+                    <view class="footContentTitle"><text>{{result[status-1].text1}}</text></view>
+                    <view class="footContentBody"><text>{{result[status-1].text2}}</text></view>
+                    <view class="footContentFoot"><text>{{result[status-1].text3}}</text></view>
                 </view>
             </view>
             <view class="footBtn" bindtap="hadleTap">
