@@ -64,6 +64,7 @@ Component({
             })
         },
         saveImg(e) {
+            let url = e.currentTarget.dataset.url
             wx.getSetting({
                 success: (res) => {
                     if (!res.authSetting['scope.writePhotosAlbum']) {
@@ -71,7 +72,7 @@ Component({
                             scope: 'scope.writePhotosAlbum',
                             success: () => {
                                 // 同意授权
-                                this.saveImg1("../../images/Component4.png");
+                                this.saveImg1(url);
                             },
                             fail: (res) => {
                                 console.log(res);
@@ -79,7 +80,7 @@ Component({
                         })
                     } else {
                         // 已经授权了
-                        this.saveImg1("../../images/Component4.png");
+                        this.saveImg1(url);
                     }
                 },
                 fail: (res) => {
@@ -96,6 +97,10 @@ Component({
                         filePath: path,
                         success: (res) => {
                             console.log(res);
+                            wx.showToast({
+                              title: '保存成功',
+                              type:"success"
+                            })
                         },
                         fail: (res) => {
                             console.log(res);

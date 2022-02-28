@@ -47,6 +47,18 @@ Page({
             showDialog:false
         })
     },
+    GetUserInfo(){
+        let that = this
+        api.GetUserInfo().then(res=>{
+            if(res.data.code==0){
+                if(res.data.data.RewardInfo.Code){
+                    that.setData({
+                        code:res.data.data.RewardInfo.Code
+                    })
+                }
+            }
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
@@ -62,11 +74,11 @@ Page({
             this.setData({result:4})
         }
         console.log(options.code)
-        if(options.code!="null"){
-            this.setData({
-                code:options.code
-            })
-        }
+        // if(options.code!="null"){
+        //     this.setData({
+        //         code:options.code
+        //     })
+        // }
         // if(options.IsSubmitPersonalInfo=="true"){
         //     this.setData({
         //         showDialog:true,
@@ -86,7 +98,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        this.GetUserInfo()
     },
 
     /**

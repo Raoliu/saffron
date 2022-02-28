@@ -23,9 +23,13 @@ Page({
     api.GetUserInfo().then(res => {
       console.log(res)
       if (res.data.code == 0) {
-        if (res.data.data.IsSubmitPersonalInfo) {
+        if(res.data.data.FormAssess.FormReturn!=null){
           wx.redirectTo({
             url: `/pages/result/index?FormReturn=${res.data.data.FormAssess.FormReturn}&code=${res.data.data.RewardInfo.Code}`,
+          })
+        }else if (res.data.data.IsSubmitPersonalInfo) {
+          wx.redirectTo({
+            url: `/pages/question/index`,
           })
         }
       } else if (res.data.code == 2000) {

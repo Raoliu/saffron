@@ -4,7 +4,7 @@
        <text>入夜低落丧体质</text>
     </view> -->
     <view class="cardPic">
-        <image bindlongtap="saveImg" mode="widthFix" class="result0_1" src="{{'../../images/Component'+status+'.png'}}"></image>
+        <image bindlongtap="saveImg" data-url="{{'../../images/Component'+status+'.png'}}" mode="widthFix" class="result0_1" src="{{'../../images/Component'+status+'.png'}}"></image>
     </view>
     <view class="cardToast">
         <!-- <view class="cardToastTitle">
