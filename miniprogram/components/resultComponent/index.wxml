@@ -1,0 +1,22 @@
+<view class="cardBody">
+    <view class="cardPic">
+        <image bindlongtap="saveImg" data-url="{{'../../images/Component'+status+'.png'}}" mode="widthFix" class="result0_1" src="{{'../../images/Component'+status+'.png'}}"></image>
+    </view>
+    <view class="cardToast">
+        <view class="foot">
+            <view class="footContent" bindtap="to">
+                <view class="footImg">
+                    <image mode="widthFix" src="{{result[status-1].image}}"></image>
+                </view>
+                <view class="footTxt">
+                    <view class="footContentTitle"><text decode="{{true}}">配合&nbsp;</text><image src="../../images/logo2.png" mode="widthFix"></image><text decode="{{true}}">&nbsp;抗emo{{result[status-1].text1}}</text></view>
+                    <view class="footContentBody"><text>{{result[status-1].text2}}</text></view>
+                    <view class="footContentFoot"><text>{{result[status-1].text3}}</text></view>
+                </view>
+            </view>
+            <view class="footBtn" bindtap="hadleTap">
+                <view>获取抗emo软糖</view>
+            </view>
+        </view>
+    </view>
+</view>

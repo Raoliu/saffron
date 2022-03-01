@@ -1,6 +1,0 @@
-@import "../style/index.wxss";
-.cardBody{
-    background-color: #F2D8DC;
-    border-top-right-radius: 40rpx;
-    padding-bottom: 40rpx;
-}

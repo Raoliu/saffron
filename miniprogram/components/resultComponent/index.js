@@ -16,26 +16,26 @@ Component({
     data: {
         result: [{
                 image: "../../images/suger.png",
-                text1: "配合Saffronia抗emo软糖",
-                text2: "每颗软糖含15毫克\nNGH-21™核心抗焦emo成份",
+                text1: "软糖",
+                text2: "每颗软糖含15毫克\nNGH-21™核心抗emo成分",
                 text3: "日常嚼嚼，一口吃掉坏情绪"
             },
             {
                 image: "../../images/suger.png",
-                text1: "配合Saffronia抗emo软糖",
-                text2: "每颗软糖含15毫克\nNGH-21™核心抗焦emo成份",
+                text1: "软糖",
+                text2: "每颗软糖含15毫克\nNGH-21™核心抗emo成分",
                 text3: "日常嚼嚼，一口吃掉坏情绪"
             },
             {
                 image: "../../images/suger3.png",
-                text1: "配合Saffronia抗emo心心糖",
-                text2: "每粒心心糖都是快乐因子\n含高达15毫克\nNGH-21™核心抗焦emo成份",
+                text1: "心心糖",
+                text2: "每粒心心糖都是快乐因子\n含高达15毫克\nNGH-21™核心抗emo成分",
                 text3: "赶走坏情绪，快乐做自己"
             },
             {
                 image: "../../images/suger4.png",
-                text1: "配合Saffronia抗emo抚压片",
-                text2: "颗抚压片含15毫克\nNGH-21™核心抗焦emo成份",
+                text1: "片",
+                text2: "每颗抚压片含15毫克\nNGH-21™核心抗emo成分",
                 text3: "放松心情，香甜好睡眠"
             },
         ]
@@ -47,7 +47,8 @@ Component({
     methods: {
         hadleTap() {
             this.triggerEvent('myevent', {
-                params: "show"
+                params: "show",
+                type:1
             }, {})
         },
         to() {
@@ -57,6 +58,7 @@ Component({
                 envVersion: 'release', // 打开正式版
                 success(res) {
                     // 打开成功
+                    getApp().mtj.trackEvent(`shop1`, { click: '',  });
                 },
                 fail: function (err) {
                     console.log(err);
@@ -89,6 +91,7 @@ Component({
             })
         },
         saveImg1(url) {
+            getApp().mtj.trackEvent(`save`, { click: '',  });
             wx.getImageInfo({
                 src: url,
                 success: (res) => {

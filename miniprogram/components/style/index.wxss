@@ -100,6 +100,12 @@
     font-size: 28rpx;
     font-weight: bold;
     color: #8A2432;
+    display: flex;
+    align-items: center;
+}
+
+.footContentTitle image{
+    width: 100rpx;
 }
 .footContentBody{
     color: #C77176;

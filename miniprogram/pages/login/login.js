@@ -8,6 +8,7 @@ Page({
      */
     data: {
         canClick: false,
+        loading:false,
         choosed: true,
         showDialog: false,
         rules: {
@@ -34,12 +35,13 @@ Page({
     },
     //关闭弹窗
     close() {
+        getApp().mtj.trackEvent('close_policy', {   click: '',  });
         this.setData({
             showDialog: false
         })
     },
     showDialogFc(){
-        console.log("123")
+        getApp().mtj.trackEvent('policy', {   click: '',  });
         this.setData({
             showDialog: true
         })
@@ -47,6 +49,8 @@ Page({
     //获取手机号
     getMobilePhone(e) {
         console.log(e.detail)
+        if(this.data.loading) return;
+        this.setData({loading:true})
         let data = {
                 iv: e.detail.iv,
                 encryptedData: e.detail.encryptedData,
@@ -58,6 +62,10 @@ Page({
                 that.setData({
                     "form.Phone": res.data.data,
                     canClick: true
+                })
+            }else{
+                that.setData({
+                    loading:false
                 })
             }
         })
@@ -129,6 +137,7 @@ Page({
             })
         }
         if (this.data.form.Phone == '' || this.data.choosed || this.data.form.Province == '' || this.data.form.Age == '' || this.data.form.Gender == '') return;
+        getApp().mtj.trackEvent('submit', {   click: '',  });
         api.SubmitPersonalInfo(this.data.form).then(res => {
             console.log(res)
             if (res.data.code == 0) {
@@ -142,7 +151,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        getApp().mtj.trackEvent('form', { pv: '',  });
     },
 
     /**

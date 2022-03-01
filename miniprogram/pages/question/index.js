@@ -10,7 +10,7 @@ Page({
         process: 0,
         index: 0,
         questions: [{
-                q1: "我为自己的某些行为、感受\n或者做的事情感到担心",
+                q1: "在生活、工作或人际关系上，\n我有消极的情绪",
                 answer: -1,
             },
             {
@@ -73,11 +73,11 @@ Page({
                         title: res.data.message,
                         icon: "none"
                     })
-                    setTimeout(function(){
+                    setTimeout(function () {
                         wx.navigateTo({
                             url: `/pages/result/index?FormReturn=${data.FormReturn}`,
                         })
-                    },1500)
+                    }, 1500)
                 } else {
                     app.getAuthKey()
                 }
@@ -87,6 +87,7 @@ Page({
             that.setData({
                 index: index + 1
             })
+            getApp().mtj.trackEvent(`q${that.data.index}`, { pv: '',  });
         }, 500)
     },
     lastQuestion() {
@@ -104,7 +105,9 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        getApp().mtj.trackEvent('q1', {
+            pv: '',
+        });
     },
 
     /**

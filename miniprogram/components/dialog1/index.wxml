@@ -15,25 +15,34 @@
                 <text>邀请两位好友成功参与测评</text>
             </view>
             <view class="dialogContent">
-                <text>
-                    即可获得价值109
-                    Saffronia抗焦虑软糖一份！
+                <view>
+                    即可获得价值109元
+                </view>
+                <view style="display: flex;justify-content: center;align-items: center;">
+                    <image src="../../images/logo2.png" mode="widthFix"></image>
+                    <text decode="{{true}}">&nbsp;抗emo软糖一份！</text>
+                </view>
+                <view>
                     现在就快快分享吧~
-                </text>
+                </view>
             </view>
             <view class="add">
                 <view>
                     <image class="Avatar" wx:if="{{Avatar}}" mode="widthFix" src="{{Avatar}}"></image>
-                    <image class="addImg" hidden="{{!auth||Avatar}}" bindtap="xiaoxi" mode="widthFix" src="../../images/+.png"></image>
-                    <button hidden="{{auth||Avatar}}" open-type='share' hover-class="none"><image class="addImg" mode="widthFix" src="../../images/+.png"></image></button>
+                    <image class="addImg" hidden="{{!auth||Avatar}}" bindtap="invite" mode="widthFix" src="../../images/+.png"></image>
+                    <button hidden="{{auth||Avatar}}" open-type='share' hover-class="none">
+                        <image class="addImg" mode="widthFix" src="../../images/+.png"></image>
+                    </button>
                 </view>
                 <view>
-                    <image hidden="{{!auth}}" class="addImg" bindtap="xiaoxi" mode="widthFix" src="../../images/+.png"></image>
-                    <button hidden="{{auth}}" open-type='share' hover-class="none"><image class="addImg" mode="widthFix" src="../../images/+.png"></image></button>
+                    <image hidden="{{!auth}}" class="addImg" bindtap="invite" mode="widthFix" src="../../images/+.png"></image>
+                    <button hidden="{{auth}}" open-type='share' hover-class="none">
+                        <image class="addImg" mode="widthFix" src="../../images/+.png"></image>
+                    </button>
                 </view>
             </view>
             <view class="footBtn">
-                <view wx:if="{{auth}}" bindtap="xiaoxi">邀请好友</view>
+                <view wx:if="{{auth}}" bindtap="invite">邀请好友</view>
                 <button wx:else open-type='share' hover-class="none">邀请好友</button>
             </view>
         </view>

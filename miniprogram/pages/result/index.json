@@ -1,9 +1,6 @@
 {
   "usingComponents": {
-    "result1":"../../components/result1/index",
-    "result2":"../../components/result2/index",
-    "result3":"../../components/result3/index",
-    "result4":"../../components/result4/index",
+    "resultComponent":"../../components/resultComponent/index",
     "suggestion":"../../components/suggestion/index",
     "dialog1":"../../components/dialog1/index",
     "dialog2":"../../components/dialog2/index"

@@ -1,12 +1,13 @@
 /* components/dialog1/index.wxss */
-.cardBody{
+.cardBody {
     background-color: #EEEAE6;
     border-top-right-radius: 40rpx;
     padding-bottom: 80rpx;
     position: relative;
     top: -2rpx;
 }
-.dialog{
+
+.dialog {
     width: 80%;
     margin: 0 auto;
     position: relative;
@@ -14,50 +15,67 @@
     background-color: #F2D8DC;
     border-radius: 40rpx;
 }
-.closeImg{
-    width:100%;
+
+.closeImg {
+    width: 100%;
     text-align: center;
     padding: 40rpx 0;
 }
-.closeImg image{
+
+.closeImg image {
     width: 64rpx;
 }
-.dialogTitle{
+
+.dialogTitle {
     color: #8A2432;
     font-size: 64rpx;
     font-weight: bold;
     text-align: center;
 }
-.dialogImg{
+
+.dialogImg {
     width: 480rpx;
     margin: 0rpx auto;
     margin-top: 20rpx;
 }
-.dialogImg image{
+
+.dialogImg image {
     width: 100%;
 }
 
-.dialogCont{
+.dialogCont {
     padding: 30rpx 0;
     text-align: center;
 }
-.dialogContitle{
+
+.dialogContitle {
     font-size: 30rpx;
     color: #8A2432;
     font-weight: bold;
+    line-height: 50rpx;
 }
-.dialogContent{
+
+.dialogContent {
     font-size: 24rpx;
     color: #8A2432;
 }
 
-.add{
+.dialogContent image {
+    width: 100rpx;
+}
+
+.dialogContent>view:last-child {
+    height: 32rpx;
+}
+
+.add {
     display: flex;
     padding: 30rpx 0;
     justify-content: center;
     gap: 40rpx;
 }
-.add>view{
+
+.add>view {
     border-radius: 5rem;
     border: 10rpx solid #AA423E;
     background-color: #EEEAE6;
@@ -67,14 +85,17 @@
     display: flex;
     justify-content: center;
 }
-.addImg{
+
+.addImg {
     width: 40rpx;
 }
-.Avatar{
+
+.Avatar {
     width: 100%;
     border-radius: 5rem;
 }
-.footBtn{
+
+.footBtn {
     width: 360rpx;
     height: 80rpx;
     margin: 0rpx auto;
@@ -84,8 +105,9 @@
     background-color: #8A2432;
     font-size: 28rpx;
     border-radius: 5rem;
-} 
-.footBtn button{
+}
+
+.footBtn button {
     color: #fff !important;
     font-weight: 400 !important;
     font-size: 28rpx !important;
@@ -94,7 +116,8 @@
     padding: 0;
     width: 100%;
 }
-.add button{
+
+.add button {
     background-color: rgba(255, 255, 255, 0);
     padding: 0rpx;
     width: 100%;

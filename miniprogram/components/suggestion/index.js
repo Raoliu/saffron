@@ -18,7 +18,7 @@ Component({
      */
     methods: {
         hadleTap(){
-            this.triggerEvent('myevent',{params: "show"},{})
+            this.triggerEvent('myevent',{params: "show",type:2},{})
         },
     }
 })

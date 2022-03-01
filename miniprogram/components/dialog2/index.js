@@ -27,6 +27,7 @@ Component({
               envVersion: 'release', // 打开正式版
               success(res) {
                 // 打开成功
+                getApp().mtj.trackEvent(`shop2`, { click: '',  });
               },
               fail: function (err) {
                 console.log(err);
@@ -42,12 +43,14 @@ Component({
                             wx.showToast({
                                 title: '复制成功'
                             })
+                            getApp().mtj.trackEvent(`copy`, { click: '',  });
                         }
                     })
                 }
             })
         },
         hadleTap() {
+            getApp().mtj.trackEvent(`clsoe_emo`, { click: '',  });
             this.triggerEvent('myevent', {
                 params: "hide"
             }, {})

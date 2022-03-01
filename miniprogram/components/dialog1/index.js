@@ -29,16 +29,18 @@ Component({
      */
     methods: {
         hadleTap() {
+            getApp().mtj.trackEvent(`clsoe_emo`, { click: '',  });
             this.triggerEvent('myevent', {
                 params: "hide"
             }, {})
         },
-        xiaoxi() {
+        invite() {
             let that = this
             wx.requestSubscribeMessage({
                 tmplIds: ["0tMeVIhxXFSWTzY7G1MYB_3lzugQQqXa6qznDZZVmh8"],
                 success(res) {
                     console.log(res)
+                    getApp().mtj.trackEvent(`invite`, { click: '',  });
                     that.setData({
                         auth: false
                     })

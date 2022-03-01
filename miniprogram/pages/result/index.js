@@ -35,6 +35,11 @@ Page({
             this.setData({
                 showDialog: true
             })
+            if(e.detail.type==1){
+                getApp().mtj.trackEvent(`get_good1`, { click: '',  });
+            }else if(e.detail.type==2){
+                getApp().mtj.trackEvent(`get_good2`, { click: '',  });
+            }
         }else{
             this.setData({
                 showDialog: false
@@ -46,6 +51,11 @@ Page({
             choosed: e.currentTarget.dataset.index,
             showDialog:false
         })
+        if(this.data.choosed == 2){
+            getApp().mtj.trackEvent(`advice`, { click: '',  });
+        }else{
+            getApp().mtj.trackEvent(`advice`, { click: '',  });
+        }
     },
     GetUserInfo(){
         let that = this
@@ -73,6 +83,7 @@ Page({
         }else{
             this.setData({result:4})
         }
+        getApp().mtj.trackEvent(`r${this.data.result}`, { pv: '',  });
         console.log(options.code)
         // if(options.code!="null"){
         //     this.setData({

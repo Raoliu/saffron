@@ -43,6 +43,7 @@ Page({
     })
   },
   getUserInfo() {
+    getApp().mtj.trackEvent('start', {   click: '',  });
     wx.getUserProfile({
       desc: '用于完善用户资料',
       success: (res) => {
@@ -111,8 +112,10 @@ Page({
     this.setData({
       showDialog: true
     })
+    getApp().mtj.trackEvent('more_info', {   click: '',  });
   },
   close() {
+    getApp().mtj.trackEvent('close_info', {   click: '',  });
     this.setData({
       showDialog: false
     })
