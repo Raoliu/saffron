@@ -17,10 +17,11 @@
                 <p>性别</p>
                 <picker bindchange="bindPickerChangeSex" value="{{sexIndex}}" range="{{sexArray}}">
                     <input class="formItem" disabled="true" value="{{form.Gender}}" />
+                    <view class="downImg">
+                        <image mode="widthFix" src="../../images/down.png"></image>
+                    </view>
                 </picker>
-                <view class="downImg">
-                    <image mode="widthFix" src="../../images/down.png"></image>
-                </view>
+
                 <view class="msg" wx:if="{{rules.showGenderMsg}}">
                     <text>*必填项目</text>
                 </view>
@@ -29,10 +30,10 @@
                 <p>年龄</p>
                 <picker bindchange="bindPickerChangeAge" value="{{ageIndex}}" range="{{ageArray}}">
                     <input class="formItem" disabled="true" value="{{form.Age}}" />
+                    <view class="downImg">
+                        <image mode="widthFix" src="../../images/down.png"></image>
+                    </view>
                 </picker>
-                <view class="downImg">
-                    <image mode="widthFix" src="../../images/down.png"></image>
-                </view>
                 <view class="msg" wx:if="{{rules.showAgeMsg}}">
                     <text>*必填项目</text>
                 </view>
@@ -41,10 +42,10 @@
                 <p>地域</p>
                 <picker mode="region" bindchange="bindRegionChange" value="{{region}}" range="{{customItem}}">
                     <input class="formItem" disabled="true" value="{{form.Province}} {{form.City}} {{form.Region}}" />
+                    <view class="downImg">
+                        <image mode="widthFix" src="../../images/down.png"></image>
+                    </view>
                 </picker>
-                <view class="downImg">
-                    <image mode="widthFix" src="../../images/down.png"></image>
-                </view>
                 <view class="msg" wx:if="{{rules.showAreaMsg}}">
                     <text>*必填项目</text>
                 </view>

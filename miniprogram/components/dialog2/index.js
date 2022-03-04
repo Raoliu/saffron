@@ -35,6 +35,7 @@ Component({
             })
           },
         copyText(e) {
+            if(!e.currentTarget.dataset.text)return
             wx.setClipboardData({
                 data: e.currentTarget.dataset.text,
                 success: function (res) {

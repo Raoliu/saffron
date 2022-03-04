@@ -84,7 +84,7 @@ Page({
             this.setData({result:4})
         }
         getApp().mtj.trackEvent(`r${this.data.result}`, { pv: '',  });
-        console.log(options.code)
+        // console.log(options.code)
         // if(options.code!="null"){
         //     this.setData({
         //         code:options.code
