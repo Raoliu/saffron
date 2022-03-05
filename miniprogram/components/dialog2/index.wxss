@@ -44,12 +44,29 @@
 .dialogCont {
     padding: 30rpx 0;
     text-align: center;
+    font-size: 30rpx;
+    color: #8A2432;
+    font-weight: bold;
 }
 
 .dialogContitle {
     font-size: 30rpx;
     color: #8A2432;
     font-weight: bold;
+}
+.dialogContent {
+    font-size: 24rpx;
+    color: #8A2432;
+    text-align: center;
+    padding: 20rpx 0;
+}
+
+.dialogCont image {
+    width: 90rpx;
+}
+
+.dialogContent>view:last-child {
+    height: 32rpx;
 }
 
 .footBtn {

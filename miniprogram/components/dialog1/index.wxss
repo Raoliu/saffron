@@ -61,7 +61,7 @@
 }
 
 .dialogContent image {
-    width: 100rpx;
+    width: 90rpx;
 }
 
 .dialogContent>view:last-child {

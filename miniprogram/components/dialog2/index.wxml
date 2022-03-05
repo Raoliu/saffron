@@ -10,9 +10,16 @@
             <image mode="widthFix" src="../../images/19.png"></image>
         </view>
         <view class="dialogCont">
-            <view class="dialogContitle">
-                <text>成功获得价值109
-                    Saffronia抗焦虑软糖一份！</text>
+            <!-- <view class="dialogContitle">
+                <text>成功获得价值109元
+                    Saffronia<sup>®</sup>抗emo软糖一份！</text>
+            </view> -->
+            <view>
+                成功获得价值109元
+            </view>
+            <view style="display: flex;justify-content: center;align-items: center;">
+                <image src="../../images/logo2.png" mode="widthFix"></image>
+                <text decode="{{true}}">&nbsp;抗emo软糖一份！</text>
             </view>
 
         </view>
