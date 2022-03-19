@@ -26,7 +26,7 @@
         <view class="card">
             <view class="cardTitle">
                 <text>快复制下方优惠码，
-                    前往商城兑换吧！
+                    添加情绪顾问进行兑换吧！
                 </text>
             </view>
             <view class="applyCode">
@@ -35,9 +35,16 @@
                     <view class="copy" bindtap='copyText' data-text="{{code}}">复制</view>
                 </view>
             </view>
-            <view class="footBtn">
-                <view bindtap="to">前往兑换</view>
+            <view class="longPressContent">
+                <p>长按添加情绪顾问</p>
             </view>
+            <view class="joinCodeImage">
+                <image mode="widthFix" show-menu-by-longpress src="../../images/joinCode.png"></image>
+            </view>
+            <!-- <view class="footBtn">
+                <view bindtap="to">点击兑换</view>
+                <view bindtap="save">点击兑换</view>
+            </view> -->
             <view class="msg">
                 <view>
                     <text>*</text>

@@ -69,11 +69,28 @@
     height: 32rpx;
 }
 
+.longPressContent{
+    width: 100%;
+    text-align: center;
+    font-size: 30rpx;
+    letter-spacing: 2rpx;
+    font-weight: 600;
+}
+
+.joinCodeImage{
+    width: 100%;
+    text-align: center;
+    padding: 20rpx 0;
+}
+
+.joinCodeImage image{
+    width: 50%;
+}
+
 .footBtn {
     width: 360rpx;
     height: 80rpx;
-    margin: 0rpx auto;
-    margin-bottom: 40rpx;
+    margin: 40rpx auto;
     line-height: 80rpx;
     text-align: center;
     color: #fff;
