@@ -8,7 +8,7 @@ Page({
     data: {
         choosed: 1,
         showDialog: false,
-        result:1,
+        result:3,
         InviteList:[
             // {Avatar:"https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83erLqxHTeMX0qBmmvdUGe6UkjqJKLmFOzYxtWxY9LHLdXaXWo18YzicficENCfwSvicTkJZJKEwtGKPJw/132"},
             // {Avatar:"https://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83erLqxHTeMX0qBmmvdUGe6UkjqJKLmFOzYxtWxY9LHLdXaXWo18YzicficENCfwSvicTkJZJKEwtGKPJw/132"},
@@ -74,15 +74,15 @@ Page({
      */
     onLoad: function (options) {
         console.log(options)
-        if(options.FormReturn<=5){
-            this.setData({result:1})
-        }else if(options.FormReturn>5&&options.FormReturn<=10){
-            this.setData({result:2})
-        }else if(options.FormReturn>10&&options.FormReturn<=16){
-            this.setData({result:3})
-        }else{
-            this.setData({result:4})
-        }
+        // if(options.FormReturn<=5){
+        //     this.setData({result:1})
+        // }else if(options.FormReturn>5&&options.FormReturn<=10){
+        //     this.setData({result:2})
+        // }else if(options.FormReturn>10&&options.FormReturn<=16){
+        //     this.setData({result:3})
+        // }else{
+        //     this.setData({result:4})
+        // }
         getApp().mtj.trackEvent(`r${this.data.result}`, { pv: '',  });
         // console.log(options.code)
         // if(options.code!="null"){

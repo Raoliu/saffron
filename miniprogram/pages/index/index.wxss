@@ -29,10 +29,26 @@ page{
   width: 100%;
   top: 40rpx;
   position: absolute;
+  z-index: 2;
 }
 .logo image{
   width: 150rpx;
   height: 82rpx;
+}
+
+.group8{
+  position: relative;
+  z-index: 1;
+}
+.group8_text{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 90rpx;
+  font-size: 22rpx;
+  color: #8A2432;
+  z-index: 2;
+  letter-spacing: 2rpx;
 }
 
 .content{
@@ -78,6 +94,7 @@ page{
   top: 0;
   left: 0;
   background-color: #8A2432;
+  z-index: 3;
 }
 .dialog{
   position: fixed;
@@ -106,7 +123,6 @@ page{
   font-size: 24rpx;
   color: #8A2432;
 }
-
 
 
 .dialogFoot{

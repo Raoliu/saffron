@@ -17,26 +17,26 @@ Component({
         result: [{
                 image: "../../images/suger.png",
                 text1: "软糖",
-                text2: "每颗软糖含15毫克\nNGH-21™核心抗emo成分",
-                text3: "日常嚼嚼，一口吃掉坏情绪"
+                text2: "每颗软糖含15毫克\n藏红花NGH-21™核心抗emo成份",
+                text3: "随时随地抗焦虑，改善情绪"
             },
             {
                 image: "../../images/suger.png",
                 text1: "软糖",
-                text2: "每颗软糖含15毫克\nNGH-21™核心抗emo成分",
-                text3: "日常嚼嚼，一口吃掉坏情绪"
+                text2: "每颗软糖含15毫克\n藏红花NGH-21™核心抗emo成份",
+                text3: "随时随地抗焦虑，改善情绪"
             },
             {
                 image: "../../images/suger3.png",
                 text1: "心心糖",
-                text2: "每粒心心糖都是快乐因子\n含高达15毫克\nNGH-21™核心抗emo成分",
-                text3: "赶走坏情绪，快乐做自己"
+                text2: "每颗心心糖含藏红花核心抗emo成份+菊粉、脑肠轴3+1",
+                text3: "深度改善焦虑型失眠，安心无依赖"
             },
             {
                 image: "../../images/suger4.png",
                 text1: "片",
-                text2: "每颗抚压片含15毫克\nNGH-21™核心抗emo成分",
-                text3: "放松心情，香甜好睡眠"
+                text2: "每颗抚压片含精纯藏红花提取物\n深度改善睡眠质量\n改善轻度&中度焦虑症",
+                text3: "改善PMS经前综合症"
             },
         ]
     },

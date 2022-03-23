@@ -5,7 +5,16 @@
       <view class="logo">
         <image mode="widthFix" src="../../images/Logo_Red.png"></image>
       </view>
-      <image mode="widthFix" src="../../images/Group8.png"></image>
+      <view class="group8">
+        <image mode="widthFix" src="../../images/Group8.png"></image>
+        <view class="group8_text">
+          <text>
+            在现代快节奏的生活中，
+            你是不是时常会感到
+            失眠、疲惫、紧张、恐惧等等
+          </text>
+        </view>
+      </view>
     </view>
     <view class="content">
       <text>
@@ -33,7 +42,7 @@
     </view>
     <view class="dialogContent">
       <text>
-        处在快节奏或繁琐压抑的日常生活中，很多人会低落、高兴不起来，对于很多事情都提不起兴趣，觉得自己很糟糕、绝望，没法让自己“积极”起来，总是很疲惫，无法起床，甚至感到乏力、记忆力减退。大家都在经历着上述这些抑郁、紧张、孤独等等，可能是大部分生活的常态，面对它们、和它们相处，是我们每一个人都要做的功课。
+        处在快节奏或繁琐压抑的日常生活中，很多人会总是很疲惫，入睡困难、睡不醒、无法起床；低落、高兴不起来，对很多事情提不起兴趣，觉得自己很糟糕、绝望，没办法让自己“积极”起来。大家都在经历着上述这些焦虑、抑郁等，面对它们、和它们相处，是我们每一个人要做 的功课。
 
         为了帮助自己更好地完成这项功课，让自己能在本就充满坎坷和挑战的生活中，能更好地去生活，我们需要先去了解这些状态、了解自己正在经历什么。
 
